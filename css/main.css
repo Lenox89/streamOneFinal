@@ -12,7 +12,7 @@ header h1 {
 }
 
 .player-container {
-  max-width: 350px;
+  max-width: 360px;
 }
 
 .navbar-brand {
@@ -27,7 +27,7 @@ header h1 {
   padding: 0;
 }
 
-.card h4, .card p {
+.card h4, .card h3, .card p {
   margin: 10px;
 }
 
@@ -36,7 +36,19 @@ header h1 {
   width: 100%;
 }
 
+#about .row {
+  margin: 0 auto;
+  max-width: 1078px;
+}
+
+#history .card {
+  width: 100%;
+}
+
 @media (max-width: 375px) { 
+  .player-container {
+    max-width: 100%;
+  }
   audio {
     width: 200px;
   }
