@@ -9,3 +9,13 @@ header {
 header h1 {
   float: left;
 }
+
+.player-container {
+  max-width: 350px;
+}
+
+@media (max-width: 375px) { 
+  audio {
+    width: 200px;
+  }
+}
