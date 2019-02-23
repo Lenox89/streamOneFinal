@@ -1,0 +1,11 @@
+html,body {
+  height: 100%;
+  width: 100%;
+}
+header {
+  clear: both;
+  margin-bottom: 20px;
+}
+header h1 {
+  float: left;
+}
