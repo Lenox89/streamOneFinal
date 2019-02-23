@@ -3,8 +3,7 @@ html,body {
   width: 100%;
 }
 header {
-  clear: both;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 header h1 {
   float: left;
@@ -12,6 +11,13 @@ header h1 {
 
 .player-container {
   max-width: 350px;
+}
+
+.navbar-brand {
+  width: 5%;
+}
+.navbar-brand img{
+  width: 100%;
 }
 
 @media (max-width: 375px) { 
