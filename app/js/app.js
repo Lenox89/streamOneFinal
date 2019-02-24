@@ -6,10 +6,28 @@ app.config(function($routeProvider,$locationProvider){
   .when('/',{ 
     templateUrl:'app/template/home.html',
     controller: 'homeController'
+  })
+  .when('/music',{ 
+    templateUrl:'app/template/music.html',
+    controller: 'musicController'
   });
 });
 
+app.controller('navController',function($scope){
+  $scope.links =[{url:'/music',
+                  title:'Music'},
+                 {url:'/link2',
+                  title:'Link 2'},
+                 {url:'/link3',
+                  title:'Link 3'},
+                 {url:'/link4',
+                  title:'Link 4'}]
+});
+
 app.controller('homeController',function($scope){
+});
+
+app.controller('musicController',function($scope){
 
   var player = $('#player');
 
@@ -39,15 +57,4 @@ app.controller('homeController',function($scope){
       });
     }, true);
   })
-});
-
-app.controller('navController',function($scope){
-  $scope.links =[{url:'/link1',
-                  title:'Link 1'},
-                 {url:'/link2',
-                  title:'Link 2'},
-                 {url:'/link3',
-                  title:'Link 3'},
-                 {url:'/link4',
-                  title:'Link 4'}]
 });
