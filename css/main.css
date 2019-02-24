@@ -39,6 +39,12 @@ img {
   margin: 10px;
 }
 
+.inline-image {
+  margin-right: 10px;
+  float: left;
+  width: 50%;
+}
+
 #about .card img {
   height: 300px;
 }
