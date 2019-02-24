@@ -18,6 +18,10 @@ app.config(function($routeProvider,$locationProvider){
   .when('/tour',{ 
     templateUrl:'app/template/tour.html',
     controller: 'tourController'
+  })
+  .when('/signup',{ 
+    templateUrl:'app/template/signup.html',
+    controller: 'signupController'
   });
 });
 
@@ -28,8 +32,8 @@ app.controller('navController',function($scope){
                   title:'News'},
                  {url:'/tour',
                   title:'Tour'},
-                 {url:'/link4',
-                  title:'Link 4'}]
+                 {url:'/signup',
+                  title:'Sign Up'}]
 });
 
 app.controller('homeController',function($scope){
@@ -71,4 +75,13 @@ app.controller('newsController',function($scope){
 });
 
 app.controller('tourController',function($scope){
+});
+
+app.controller('signupController',function($scope){
+  $('#signup-form').submit(function(event){
+    event.preventDefault();
+    $('#signup-form').slideUp(function(){
+      $('#form-thankyou').slideDown();
+    });
+  })
 });

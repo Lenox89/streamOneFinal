@@ -62,6 +62,10 @@ img {
   height: auto;
 }
 
+#form-thankyou {
+  display: none;
+}
+
 @media (max-width: 375px) { 
   .player-container {
     max-width: 100%;
