@@ -14,6 +14,10 @@ app.config(function($routeProvider,$locationProvider){
   .when('/news',{ 
     templateUrl:'app/template/news.html',
     controller: 'newsController'
+  })
+  .when('/tour',{ 
+    templateUrl:'app/template/tour.html',
+    controller: 'tourController'
   });
 });
 
@@ -22,8 +26,8 @@ app.controller('navController',function($scope){
                   title:'Music'},
                  {url:'/news',
                   title:'News'},
-                 {url:'/link3',
-                  title:'Link 3'},
+                 {url:'/tour',
+                  title:'Tour'},
                  {url:'/link4',
                   title:'Link 4'}]
 });
@@ -64,4 +68,7 @@ app.controller('musicController',function($scope){
 });
 
 app.controller('newsController',function($scope){
+});
+
+app.controller('tourController',function($scope){
 });
