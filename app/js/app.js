@@ -37,10 +37,73 @@ app.controller('navController',function($scope){
 });
 
 app.controller('homeController',function($scope){
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  $scope.plusSlides=function(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  $scope.currentSlide = function(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = $(".mySlides");
+    var dots = $(".demo");
+    var captionText = $("#caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
 });
 
 app.controller('musicController',function($scope){
+  var slideIndex = 1;
+  showSlides(slideIndex);
 
+  // Next/previous controls
+  $scope.plusSlides=function(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  $scope.currentSlide = function(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = $(".mySlides");
+    var dots = $(".demo");
+    var captionText = $("#caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    slides.each(function(i){
+      console.log(slides[i].children[1].load())
+    })
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  // +++++++++++++++++++++++
   var player = $('#player');
 
   var audios = [{src:'media/audio/SampleAudio_0.4mb.mp3',
