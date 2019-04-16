@@ -12,6 +12,43 @@ header h1 {
   float: left;
 }
 
+.nav-link {
+  color: black;
+}
+
+.tour .date {
+  background-color: white;
+  border: 1px solid black;
+  height: 70px;
+  padding-top: 8px;
+  width: 100px;
+}
+
+.tour .date .city {
+  padding-top: 14px;
+}
+
+.tour .date .button {
+  margin-top: 13px;
+}
+
+.tour .date .button a:hover {
+  background-color: blue;
+  color: white;
+  border: none;
+  /*margin-top: 10px;*/
+}
+
+.tour .dates a {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  height: 30px;
+  text-decoration: none;
+  padding: 10px 35px;
+  width: 100px;
+}
+
 img {
   width: 100%;
 }
@@ -55,12 +92,17 @@ a.fa {
 }
 
 #about .card img {
-  /*height: 300px;*/
+  height: 300px;
 }
 
 .gallery .gall-row {
   margin: 0 auto;
   /*max-width: 1078px;*/
+}
+
+.gallery .gall-row img {
+  height: 100px;
+  width: 100%;
 }
 
 #history .card {
