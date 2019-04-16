@@ -106,10 +106,18 @@ app.controller('musicController',function($scope){
   // +++++++++++++++++++++++
   var player = $('#player');
 
-  var audios = [{src:'media/audio/SampleAudio_0.4mb.mp3',
-                 title:'Sample 1'},
-                {src:'media/audio/SampleAudio_0.7mb.mp3',
-                 title:'Sample 2'}]
+  var audios = [{src:'media/audio/Alone Together.mp3',
+                 title:'Alone Together'},
+                {src:'media/audio/Centuries - Fall Out Boy.mp3',
+                 title:'Centuries'},
+                {src:'media/audio/Dance, Dance.mp3',
+                 title:'Dance, Dance'},
+                {src:'media/audio/Immortals.mp3',
+                 title:'Immortals'},
+                 {src:'media/audio/Irresistible.mp3',
+                 title:'Irresistible'},
+                {src:'media/audio/This Ain\'t A Scene, It\'s An Arms Race.mp3',
+                 title:'This Ain\'t A Scene, It\'s An Arms Race.mp3'}]
 
 
   for (var i = 0; i <= audios.length - 1; i++) {
