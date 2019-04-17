@@ -1,38 +1,56 @@
-var app = angular.module('app',['ngRoute']);
+var app = angular.module('app',['ui.router']);
 
-app.config(function($routeProvider,$locationProvider){
-  $locationProvider.html5Mode(true);
-  $routeProvider
-  .when('/',{ 
+app.config(function($stateProvider) {
+  var homeState = {
+    name: 'home',
+    url: '',
     templateUrl:'app/template/home.html',
     controller: 'homeController'
-  })
-  .when('/music',{ 
-    templateUrl:'app/template/music.html',
-    controller: 'musicController'
-  })
-  .when('/news',{ 
+  }
+
+  var newsState = {
+    name: 'news',
+    url: '/news',
     templateUrl:'app/template/news.html',
     controller: 'newsController'
-  })
-  .when('/tour',{ 
-    templateUrl:'app/template/tour.html',
-    controller: 'tourController'
-  })
-  .when('/signup',{ 
+  }
+
+  var musicState = {
+    name: 'music',
+    url: '/music',
+    templateUrl:'app/template/music.html',
+    controller: 'musicController'
+  }
+
+  var signupState = {
+    name: 'signup',
+    url: '/signup',
     templateUrl:'app/template/signup.html',
     controller: 'signupController'
-  });
+  }
+
+  var tourState = {
+    name: 'tour',
+    url: '/tour',
+    templateUrl:'app/template/tour.html',
+    controller: 'tourController'
+  }
+
+  $stateProvider.state(homeState);
+  $stateProvider.state(newsState);
+  $stateProvider.state(signupState);
+  $stateProvider.state(tourState);
+  $stateProvider.state(musicState);
 });
 
 app.controller('navController',function($scope){
-  $scope.links =[{url:'/music',
+  $scope.links =[{url:'music',
                   title:'Music'},
-                 {url:'/news',
+                 {url:'news',
                   title:'News'},
-                 {url:'/tour',
+                 {url:'tour',
                   title:'Tour'},
-                 {url:'/signup',
+                 {url:'signup',
                   title:'Sign Up'}]
 });
 

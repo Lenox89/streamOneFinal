@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fall Out Boy</title>
+  <base href="/streamOneFinal/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.angularjs.org/1.7.6/angular.min.js"></script>
+  <!-- <script src="https://code.angularjs.org/1.7.6/angular-route.min.js"></script> -->
+  <script src="https://unpkg.com/@uirouter/angularjs@1.0.22/release/angular-ui-router.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="app/js/app.js"></script>
+</head>
+<body ng-app="app">
+  <header class="container">
+    <h1 class="navbar-brand"><a ng-href="/streamOneFinal/"><img src="media/pictures/logo.png" alt=""></a></h1>
+    <nav>
+      <ul class="nav justify-content-end" ng-controller="navController">
+        <li class="nav-item" ng-repeat="link in links"><a class="nav-link" ui-sref="{{link.url}}" ui-sref-active="active">{{link.title}}</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main ui-view></main>
+  <footer class="container mt-5">
+    <div class="col-12 text-center">
+      <a href="https://twitter.com/falloutboy" class="fa fa-twitter"></a>
+      <a href="https://www.facebook.com/falloutboy" class="fa fa-facebook"></a>
+      <a href="https://www.instagram.com/FallOutBoy/" class="fa fa-instagram"></a>
+      <a href="https://www.youtube.com/channel/UC2qWxZHgnlwDvcmLqP23jrA" class="fa fa-youtube"></a>
+      <a href="https://www.reddit.com/r/FallOutBoy/" class="fa fa-reddit"></a>
+    </div>
+    <hr>
+    <div class="col-12 text-center mt-3">
+      <h3>By <a href="https://github.com/Lenox89">Cameron Macon<a></h3>
+      <p>&copy 2019 Fall Out Boy</p>
+    </div>
+  </footer>
+</body>
+</html>

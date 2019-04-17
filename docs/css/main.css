@@ -1,0 +1,220 @@
+html,body {
+  background-color: #D7D1CE;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+header h1 {
+  float: left;
+}
+
+.nav-link {
+  color: black;
+}
+
+.tour .date {
+  background-color: white;
+  border: 1px solid black;
+  height: 70px;
+  padding-top: 8px;
+  width: 100px;
+}
+
+.tour .date .city {
+  padding-top: 14px;
+}
+
+.tour .date .button {
+  margin-top: 13px;
+}
+
+.tour .date .button a:hover {
+  background-color: blue;
+  color: white;
+  border: none;
+  /*margin-top: 10px;*/
+}
+
+.tour .dates a {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  height: 30px;
+  text-decoration: none;
+  padding: 10px 35px;
+  width: 100px;
+}
+
+img {
+  width: 100%;
+}
+
+.fa {
+  font-size: 35px;
+}
+
+a.fa {
+  color: black;
+}
+
+.page-heading {
+  text-align: center;
+}
+
+.player-container {
+  max-width: 360px;
+}
+
+.navbar-brand {
+  width: 5%;
+}
+
+.navbar-brand img{
+  width: 100%;
+}
+
+.card {
+  padding: 0;
+}
+
+.card h4, .card h3, .card p {
+  margin: 10px;
+}
+
+.inline-image {
+  margin-right: 10px;
+  float: left;
+  width: 50%;
+}
+
+#about .card img {
+  height: 300px;
+}
+
+.gallery .gall-row {
+  margin: 0 auto;
+  /*max-width: 1078px;*/
+}
+
+.gallery .gall-row img {
+  height: 100px;
+  width: 100%;
+}
+
+#history .card {
+  width: 100%;
+}
+
+#history .card img {
+  height: auto;
+}
+
+#form-thankyou {
+  display: none;
+}
+
+@media (max-width: 375px) { 
+  .player-container {
+    max-width: 100%;
+  }
+  audio {
+    width: 200px;
+  }
+}
+
+/*=============================*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides video, .mySlide img {
+  width: 100%;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.gall-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
